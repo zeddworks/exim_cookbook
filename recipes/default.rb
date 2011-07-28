@@ -29,6 +29,6 @@ smtp = Chef::EncryptedDataBagItem.load("apps", "smtp")
 template "/etc/exim4/update-exim4.conf.conf" do
   source "update-exim4.conf.conf.erb"
   variables({
-    :smtp_domain => smtp["domain"]
+    :domain => smtp["domain"]
   })
 end
