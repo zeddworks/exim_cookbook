@@ -33,3 +33,5 @@ template "/etc/exim4/update-exim4.conf.conf" do
     :smtp_host => smtp["smtp_host"]
   })
 end
+
+execute "update-exim4.conf"
