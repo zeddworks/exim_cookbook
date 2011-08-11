@@ -24,7 +24,7 @@ package "exim" do
   )
 end
 
-smtp = Chef::EncryptedDataBagItem.load("env", "#{node[:brand]}_smtp")
+smtp = Chef::EncryptedDataBagItem.load("apps", "#{node[:brand]}_smtp")
 
 template "/etc/exim4/update-exim4.conf.conf" do
   source "update-exim4.conf.conf.erb"
